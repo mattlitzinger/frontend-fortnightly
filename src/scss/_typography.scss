@@ -1,0 +1,79 @@
+// _typography.scss
+
+html,
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+
+	@include responsive-breakpoint(mobile) {
+		font-size: 18px;
+	}
+
+	@include responsive-breakpoint(desktop) {
+		font-size: 20px;
+	}
+}
+
+body {
+	font-family: 'Source Code Pro', monospace;
+	text-align: center;
+	color: $white;
+}
+
+a {
+	color: $white;
+	transition: color 200ms ease-in-out;
+
+	&:hover, 
+	&:focus {
+		color: $dark_blue;
+	}
+}
+
+h1 {
+	margin: 0 0 24px;
+	font-weight: 400;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 60px;
+	line-height: 95%;
+	text-shadow: 4px 4px $dark_blue;
+
+	@include responsive-breakpoint(mobile) {
+		font-size: 72px;
+		text-shadow: 5px 5px $dark_blue;
+	}
+
+	@include responsive-breakpoint(desktop) {
+		font-size: 94px;
+		text-shadow: 6px 6px $dark_blue;
+	}
+}
+
+h2 {
+	margin: 0 0 20px;
+	font-weight: 400;
+	font-size: 1.25rem;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+.subhead {
+	font-size: 1.25rem;
+}
+
+.small-text {
+	font-size: 0.8rem;
+}
+
+.separator {
+	display: inline-block;
+	margin: 0 6px;
+}
+
+::selection {
+  background: $yellow;
+  color: $dark_blue;
+}

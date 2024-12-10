@@ -1,0 +1,37 @@
+// _config.scss
+
+// Colors
+$white: #FFFFFF;
+$blue: #738BB9;
+$blue-50: #738BB980;
+$dark_blue: #384E76;
+$orange: #9f6a3b; 
+$dark_orange: #75461e;
+$yellow: #fbd143;
+$dark_yellow: #f7c20c;
+
+// Breakpoints
+$breakpoints: (
+	mobile: 640px,
+	tablet: 768px,
+	desktop: 1024px,
+	widescreen: 1280px
+);
+
+@mixin responsive-breakpoint($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+// Helpers
+
+.mb0 {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,51 @@
+// _base.scss
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+:focus {
+  outline: auto;
+  outline-style: dotted;
+  outline-width: 2px;
+  outline-color: initial;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: 100%;
+	background-color: #4A69A4;
+}
+
+.container {
+	width: 600px;
+	max-width: 90%;
+	margin: 32px auto;
+	padding: 42px 24px;
+	background-color: $blue-50;
+	transform: rotate(2deg);
+
+	@include responsive-breakpoint(mobile) {
+		padding: 68px 30px;;
+	}
+
+	@include responsive-breakpoint(desktop) {
+		padding: 80px 40px;
+	}
+}
+
+.container-inner {
+	transform: rotate(-2deg);
+}
